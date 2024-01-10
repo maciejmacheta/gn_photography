@@ -1,0 +1,38 @@
+/* MainHeader.css */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    align-items: center;
+    min-height: 1000;
+    padding: 20px;
+    padding-right: 20vh;
+    background-color: black;
+  }
+  
+  .logo img {
+    width: 100%;
+    height: 650px;
+    /* Dodatkowe style dla logo */
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu li {
+    font-size: 8vh;
+    margin-bottom: 5vh ;
+    margin-right: 15px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  
