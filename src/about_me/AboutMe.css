@@ -1,0 +1,50 @@
+
+@font-face {
+    font-family: blacklisted;
+    src: url("../../public/fonts/Blacklisted.ttf");
+}
+
+.about-me-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+  }
+  
+  .about-me-content {
+    text-align: center;
+    max-width: 700px;
+    padding: 20px;
+  }
+  .about-me-image img {
+    height: 450px;
+    margin-left: 5vh;
+    margin-right: 1vh;
+    user-select: none;
+  }
+  .about-me-image-mobile{
+    height: 120px;
+    margin-left: 5vh;
+    margin-right: 1vh;
+  }
+  .about-me-content h2 {
+    font-family: blacklisted;
+    text-align: left;
+    margin-top: 3vh;
+    color: #ffffff; /* Kolor tytułu */
+    user-select: none;
+  }
+  
+  p {
+    text-align: left;
+    color: #fbfbfb; /* Kolor tekstu */
+    user-select: none;
+  }
+  
+  .about-me-visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+  }
+  

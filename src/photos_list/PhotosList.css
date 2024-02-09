@@ -1,3 +1,32 @@
+@font-face {
+    font-family: blacklisted;
+    src: url("../../public/fonts/Blacklisted.ttf");
+  }
+
 .Overlay {
     margin: 1vh;
+    text-align: center;
+
+    user-select: none;
 }
+
+.title h2{
+    font-size: 8vh;
+    color: white;
+    font-family: blacklisted;
+    user-select: none;
+}
+
+.custom-overlay__caption {
+    background-color: rgba(0, 0, 0, 0.9);
+    max-height: 350px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 30px 0px 30px 0px;
+    font-size: 90%;
+    font-weight: 600;
+  }
+  

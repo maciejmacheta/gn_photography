@@ -1,38 +1,192 @@
 /* MainHeader.css */
-
+@font-face {
+  font-family: blacklisted;
+  src: url("../../public/fonts/Blacklisted.ttf");
+}
 .main-header {
     display: flex;
-    justify-content: space-between;
-    height: 100vh;
-    align-items: center;
-    min-height: 1000;
-    padding: 20px;
-    padding-right: 20vh;
-    background-color: black;
+    width: 100%;
+    height: 150vh;
+    align-items:flex-start;
+    background-color: rgb(0, 0, 0);
   }
-  
+  .mainHeaderSocialIcons {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .mainHeaderFacebookIcon {
+    margin: 20px 20px 0px 20px;
+  }
+
+  .mainHeaderInstagramIcon {
+    margin: 20px 0px 0px 0px;
+  }
+  .contactIcon:hover {
+    fill: rgb(95, 207, 225);}
+  .mainHeaderBox {
+    margin-top: 5vh;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .logo {
+    width: 60%;
+  }
   .logo img {
     width: 100%;
-    height: 650px;
-    /* Dodatkowe style dla logo */
+    height: 100%;
+    user-select: none;
   }
   
+  .menu {
+    
+    width: 30%;
+    scroll-behavior: smooth;
+  }
   .menu ul {
     list-style-type: none;
     display: flex;
+    font-family: blacklisted;
     flex-direction: column;
   }
   
   .menu li {
-    font-size: 8vh;
+    font-size: 6vh;
+    font-stretch: 100%;
     margin-bottom: 5vh ;
-    margin-right: 15px;
+    cursor: pointer;
+    white-space: nowrap; 
   }
   
   .menu li a {
+    user-select: none;
     text-decoration: none;
     color: white;
     font-weight: bold;
   }
   
   
+  @keyframes glitch-effect {
+    0%, 100% {
+      transform: translate(0);
+      opacity: 1;
+      text-shadow: none;
+    }
+    5% {
+      transform: translate(-2px, 2px);
+      text-shadow: 2px -2px 0 rgba(255,0,0,0.7), -2px 2px 0 rgba(0,255,0,0.7);
+    }
+    10% {
+      transform: translate(-5px, 5px);
+      text-shadow: 5px -5px 0 rgba(255,0,0,0.8), -5px 5px 0 rgba(0,255,0,0.8);
+    }
+    15% {
+      transform: translate(3px, -3px);
+      text-shadow: -3px 3px 0 rgba(0,0,255,0.7), 3px -3px 0 rgba(0,255,0,0.7);
+    }
+    20% {
+      transform: translate(5px, -5px);
+      text-shadow: -5px 5px 0 rgba(0,0,255,0.8), 5px -5px 0 rgba(0,255,0,0.8);
+    }
+    25% {
+      transform: translate(-3px, 3px);
+      text-shadow: 3px -3px 0 rgba(255,0,0,0.7), -3px 3px 0 rgba(255,255,0,0.7);
+    }
+    30%, 50%, 70% {
+      transform: translate(-5px, 5px);
+      text-shadow: 5px -5px 0 rgba(255,0,0,0.8), -5px 5px 0 rgba(0,255,255,0.8);
+    }
+    35%, 55%, 75% {
+      transform: translate(2px, -2px);
+      text-shadow: -2px 2px 0 rgba(0,255,255,0.7), 2px -2px 0 rgba(255,0,255,0.7);
+    }
+    40%, 60%, 80% {
+      transform: translate(5px, -5px);
+      text-shadow: -5px 5px 0 rgba(255,255,0,0.8), 5px -5px 0 rgba(255,0,255,0.8);
+    }
+    45%, 65%, 85% {
+      transform: translate(-3px, 3px);
+      text-shadow: 3px -3px 0 rgba(255,0,0,0.7), -3px 3px 0 rgba(0,0,255,0.7);
+    }
+    90% {
+      transform: translate(-5px, 5px);
+      text-shadow: 5px -5px 0 rgba(0,255,255,0.8), -5px 5px 0 rgba(255,0,255,0.8);
+    }
+    95% {
+      transform: translate(3px, -3px);
+      text-shadow: -3px 3px 0 rgba(255,255,0,0.7), 3px -3px 0 rgba(0,0,255,0.7);
+    }
+  }
+  
+  
+  @keyframes glitch-skew {
+    0%, 100% {
+      transform: skew(0deg);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: skew(-3deg);
+    }
+    20%, 40%, 60%, 80% {
+      transform: skew(3deg);
+    }
+  }
+  
+  @keyframes glitch-noise {
+    0%, 100% {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0.96;
+      text-shadow: 
+        0 0 10px rgba(255, 115, 115, 0.3),
+        0 0 15px rgba(255,255,255,0.2),
+        0 0 20px rgba(255,255,255,0.1);
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 
+        0 0 4px rgba(255, 0, 0, 0.5),
+        0 0 6px rgba(255,255,255,0.3),
+        0 0 8px rgba(255,255,255,0.1);
+    }
+  }
+
+
+  @keyframes glitch-scale {
+    0%, 100% {
+      transform: scale(1);
+    }
+    20%, 60% {
+      transform: scale(0.98);
+    }
+    40%, 80% {
+      transform: scale(1.02);
+    }
+  }
+  
+  @keyframes glitch-rotate {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    20%, 40%, 60%, 80% {
+      transform: rotate(0.2deg);
+    }
+    30%, 50%, 70%, 90% {
+      transform: rotate(-0.2deg);
+    }
+  }
+  
+  .menu li.glitch-effect a {
+    animation: 
+    glitch-effect 1.6s infinite linear,
+    glitch-skew 0.8s infinite linear,
+    glitch-noise 0.6s infinite linear,
+    glitch-scale 2s infinite linear,
+    glitch-rotate 1s infinite linear;
+    color: #ffffff; 
+    display: inline-block;
+  }
